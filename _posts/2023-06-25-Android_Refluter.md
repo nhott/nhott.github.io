@@ -1,10 +1,10 @@
 ---
-title: Bypass refluter 
+title: Bypass reflutter 
 date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
-# image: ../assets/img/android.jpg
+image: ../assets/img/android/reflutter.png
 ---
 
 ## Bypass refluter ssl pinning

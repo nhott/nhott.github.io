@@ -4,7 +4,7 @@ date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
-# image: ../assets/img/android.jpg
+image: ../assets/img/android/ssl.jpg
 ---
 ## Frida
 ### Install frida 

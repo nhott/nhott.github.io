@@ -3,6 +3,7 @@ title: Port Redirection Tunneling
 date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Pentesting, Network Pentesting]
 tags: [Port Tunneling] 
+image: ../assets/img/network/ssh_tunnel.jpg
 ---
 
 ## Port Forwarding
