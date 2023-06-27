@@ -1,5 +1,5 @@
 ---
-title: Bypass SSL & TLS pinning 
+title: Bypass SSL & TLS Pinning 
 date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
