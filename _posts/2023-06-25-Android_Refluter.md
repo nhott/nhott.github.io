@@ -5,7 +5,7 @@ categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
 image:
-  path: ../assets/img/android/reflutter.png
+  path: /assets/img/android/reflutter.png
   alt: image alternative text
 ---
 

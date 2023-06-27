@@ -5,7 +5,7 @@ categories: [Pentesting, Network Pentesting]
 tags: [Port Tunneling] 
 # image: ../assets/img/network/ssh_tunnel.jpg
 image:
-  path: ../assets/img/network/ssh_tunnel.jpg
+  path: /assets/img/network/ssh_tunnel.jpg
   alt: image alternative text
 ---
 

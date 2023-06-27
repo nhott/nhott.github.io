@@ -5,7 +5,7 @@ categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
 image:
-  path: ../assets/img/android.jpg
+  path: /assets/img/android.jpg
   alt: image alternative text
 ---
 

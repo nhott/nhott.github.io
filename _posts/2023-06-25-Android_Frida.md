@@ -5,7 +5,7 @@ categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
 image:
-  path: ../assets/img/android/ssl.jpg
+  path: /assets/img/android/ssl.jpg
   alt: image alternative text
 ---
 ## Frida
