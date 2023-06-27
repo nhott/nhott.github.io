@@ -4,7 +4,9 @@ date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
-image: ../assets/img/android.jpg
+image:
+  path: ../assets/img/android.jpg
+  alt: image alternative text
 ---
 
 

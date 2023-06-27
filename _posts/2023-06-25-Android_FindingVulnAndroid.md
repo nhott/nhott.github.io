@@ -4,10 +4,12 @@ date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
-image: ../assets/img/android/findding.jpg
+image:
+  path: ../assets/img/android/findding.jpg
+  alt: image alternative text
 ---
 
-# Finding Vulnẻability
+# Finding Vulnerability
 ## Automation check vulnerablity by tool
 - Check DoS: **AnDOSid**
 - Find and exploit android app vulnerabilities: **Drozer**
