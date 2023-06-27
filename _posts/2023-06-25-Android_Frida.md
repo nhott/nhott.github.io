@@ -17,15 +17,17 @@ pip3 install frida-tools
 - Install frida server on android
 
 ```shell
-- sử dụng command **adb shell getprop ro.product.cpu.abi** để check version cần download
-- download frida server theo link https://github.com/frida/frida/releases/
-- giải nén file đã download và đổi tên thành frida-server
-- copy file frida-server từ windows lên android bằng adb shell
-adb push C:\path\frida-server /data/local/tmp
-- Cấp quyền thực thi cho frida-server 
-adb shell chmod 755 /data/local/tmp/frida-server
-- start frida-server trên android: adb shell /data/local/tmp/frida-server &
-    (note phải có ký tự & khi chạy frida-server)
+- Check the version of the android device:
+     adb shell getprop ro.product.cpu.abi 
+- Download frida server https://github.com/frida/frida/releases/
+- Extract the downloaded file and rename it to "frida-server"
+- Copy frida-server file from windows to android by adb shell:
+     adb push C:\path\frida-server /data/local/tmp
+- Grant execute permission to the frida-server file:
+     adb shell chmod 755 /data/local/tmp/frida-server
+- Start frida-server on android device: 
+     adb shell /data/local/tmp/frida-server &
+
 ```
 
 ## Objection
