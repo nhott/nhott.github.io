@@ -6,7 +6,7 @@ tags: [Android Pentesting]
 
 image:
   path: /assets/img/android/reflutter.png
-  alt: image alternative text
+#   alt: image alternative text
 ---
 
 ## Bypass refluter ssl pinning

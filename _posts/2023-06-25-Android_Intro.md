@@ -6,7 +6,7 @@ tags: [Android Pentesting]
 
 image:
   path: /assets/img/android.jpg
-  alt: image alternative text
+#   alt: image alternative text
 ---
 
 

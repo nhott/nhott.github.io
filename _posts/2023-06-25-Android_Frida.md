@@ -6,7 +6,7 @@ tags: [Android Pentesting]
 
 image:
   path: /assets/img/android/ssl.jpg
-  alt: image alternative text
+#   alt: image alternative text
 ---
 ## Frida
 ### Install frida 

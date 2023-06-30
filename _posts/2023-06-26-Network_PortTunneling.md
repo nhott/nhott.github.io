@@ -6,7 +6,7 @@ tags: [Port Tunneling]
 # image: ../assets/img/network/ssh_tunnel.jpg
 image:
   path: /assets/img/network/ssh_tunnel.jpg
-  alt: image alternative text
+#   alt: image alternative text
 ---
 
 
