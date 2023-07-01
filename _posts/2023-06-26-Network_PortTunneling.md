@@ -13,7 +13,7 @@ image:
 
 ## Port Forwarding
 
->	Port forwarding is the simplest traffic manipulation technique we will examine in which we redirect traffic destined for one IP address and port to another IP address and port.
+Port forwarding is the simplest traffic manipulation technique we will examine in which we redirect traffic destined for one IP address and port to another IP address and port.
 
 |Machine | account|
 |---|---|
