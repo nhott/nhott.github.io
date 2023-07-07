@@ -1,6 +1,6 @@
 ---
 title: Malware Analysis in Malicious Document 
-date: 2023-07-07 22:00:00 +/-TTTT
+date: 2023-06-25 22:50:30 +/-TTTT
 categories: [Malicious, Malware Analysic in Malicious]
 tags: [Malware Analysis] 
 
@@ -9,11 +9,6 @@ image:
 #   alt: image alternative text
 ---
 
-Some document:
-	http://virusshare.com
-	http://contagio.blogspot.com
-
-
 # Rule detect yara
 ```ad-note
 Download yara-rules: https://github.com/Yara-Rules/rules
@@ -21,8 +16,7 @@ command: yara -w /yara/rules/index.yar file_name.pdf
 
 ```
 # Tool
-## Some tool
-```ad-note
+```code
 - yara
 		yara -w /yara/rules/index.yar file.pdf
 		
@@ -70,12 +64,21 @@ command: yara -w /yara/rules/index.yar file_name.pdf
 		some tool winDbg, WinAppDbg, Pefile, Capstone
 ```
 
-## Metadata
-```ad-note
-- exiftool
+## Metadata information
+```code
+    exiftool
 ```
-## signature detection
-zipdump + yara
+## Signature detection
+    zipdump + yara
 
 ## VBA
-olevba
+    olevba
+
+
+--> Some document:
+
+	http://virusshare.com
+
+	http://contagio.blogspot.com
+
+
