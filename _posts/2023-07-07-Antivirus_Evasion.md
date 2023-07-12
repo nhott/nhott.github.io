@@ -5,7 +5,7 @@ categories: [Malicious,Antivirus Evasion]
 tags: [Antivirus Evasion] 
 
 image:
-  path: /assets/img/malicious/yara.png
+  path: /assets/img/malicious/antimal.png
 #   alt: image alternative text
 ---
 ### **Detection Methods**
