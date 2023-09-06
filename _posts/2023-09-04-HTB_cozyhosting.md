@@ -21,37 +21,40 @@ image:
  User dirsearch to find the path of the website
 ![]( /assets/img/htb/cozyhosting/dir.png)
 
- Access to the path actuator, I see some data. I focus at sessions
+ I have access to the path actuator and I can see some data. I focusing on sessions
 ![]( /assets/img/htb/cozyhosting/actuator.png)
 
- With the path session I can get session of kanderson
+ With the path session I can get a session of kanderson
 ![]( /assets/img/htb/cozyhosting/session.png)
 
- Fuzzing more the session I see the path admin
+ Fuzzing the session more, I see the admin path.
 ![]( /assets/img/htb/cozyhosting/ffuf.png)
 
 
 
 ## Exploit
- With all information I gathering, I use session of kanderson to get /admin page
- At here, I can input a IP and username. I the machine try to ssh to my IP input
+ With all the information I have gathered, I used a session of kanderson to get to the /admin page.
+ 
+ Here, I can input an IP and username. I the machine will try to ssh to my input IP.
 ![]( /assets/img/htb/cozyhosting/loginWithSession.png)
 ![]( /assets/img/htb/cozyhosting/insertPayload.png)
 
-The username does not contain space characters. So to inject payload reshell I must find the payload bypass reshell.
-I saw common limitations bypasses reshell (https://book.hacktricks.xyz/linux-hardening/bypass-bash-restrictions).
-Send the request and run listening at attaker machine:
+The username does not contain any space characters. Therefore, to inject a payload reshell I must find a payload that bypass the reshell.
+
+I saw some common limitations bypasses reshell (https://book.hacktricks.xyz/linux-hardening/bypass-bash-restrictions).
+Send the request and run a listener on the attaker machine:
 ![]( /assets/img/htb/cozyhosting/payload.png)
 
 ![]( /assets/img/htb/cozyhosting/nc.png)
 
-  With the file jar I downloaded, I extracked it and see the information postgresSQL at application.properties
+  With the file jar I downloaded, I extracted it and saw the information for PostgresSQL in application.properties
 ![]( /assets/img/htb/cozyhosting/extractFile.png)
 
 ![]( /assets/img/htb/cozyhosting/getInfo-psql.png)
 
- With the information I get, I connect to postgreSQL and gathering information. I see some hash passwd.
- To crack the hash password, I use John The Ripper. And after get password I successfully login ssh
+ With the information I get, I connect to PostgreSQL and gather information. I see some hash passwords.
+
+ To crack the hash passwords, I use John The Ripper. And after get the password I successfully login to ssh.
 ![]( /assets/img/htb/cozyhosting/hashPasswd.png)
 
 ![]( /assets/img/htb/cozyhosting/crackPasswd.png)
@@ -59,8 +62,8 @@ Send the request and run listening at attaker machine:
 ![]( /assets/img/htb/cozyhosting/ssh.png)
 
 ## Escalation
- After login success, I recon with command sudo -l
+ After login successfully, To escalation to root, I check the permissions of the user with the command "sudo -l"
  ![]( /assets/img/htb/cozyhosting/reconRoot.png)
 
- I see user josh can sudo ssh. So I search sudo ssh at gtfobins.github.io
+ I saw that user josh can use sudo ssh. So I searched for "sudo -> ssh" at gtfobins.github.io
  ![]( /assets/img/htb/cozyhosting/root.png)
