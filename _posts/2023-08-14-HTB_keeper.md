@@ -42,7 +42,7 @@ After login success, I saw a zip file so I downloaded it and extract it.
 
 ![]( /assets/img/htb/keeper/extract.png)
 
-Use KeePassXC tool to open passcodes.kdbx. But I don't have password to unclock it, I must crack password. I used keepass2john tool to crack so it need many time so I search vulnerability of keepass an I see a vulnerability with CVE-2023-32784. I git clone code and dump passsword.
+Use KeePassXC tool to open passcodes.kdbx. But I don't have password to unclock it, I must crack password. I used keepass2john tool to crack so it need many time so I search vulnerability of keepass and I see a vulnerability with CVE-2023-32784. I git clone code and dump passsword.
 ![]( /assets/img/htb/keeper/keepassxc.png)
 
 ![]( /assets/img/htb/keeper/dumpPasswd.png)
