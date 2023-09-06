@@ -20,7 +20,7 @@ image:
 
 ## Exploit
 
-I know that this website is Request Tracker (RT) and that it has a form login, so I searched for the account default of RT 4.4.4
+I know this website is Request Tracker (RT) and that it has a form login, so I searched for the account default of RT 4.4.4
 
 I get the defautlt information account for RT 4.4.4 with User: root and Password: password
 
