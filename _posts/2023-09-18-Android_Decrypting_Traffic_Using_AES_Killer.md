@@ -5,7 +5,7 @@ categories: [Pentesting, Android Applications]
 tags: [Android Pentesting] 
 
 image:
-  path: /assets/img/android/aeskillerr.png
+  path: /assets/img/android/aeskiller.png
 #   alt: image alternative text
 ---
 
