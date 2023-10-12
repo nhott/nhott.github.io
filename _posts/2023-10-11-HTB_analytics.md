@@ -24,9 +24,6 @@ image:
 
  I have access to the subdomain path and I know this is an open source Metabse. Let's try to find vulnerabilities in Metabase
 
-
-
-
 ## Exploit
 
 ![]( /assets/img/htb/analytics/web2.png)
