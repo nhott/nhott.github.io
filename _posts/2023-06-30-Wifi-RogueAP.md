@@ -28,7 +28,7 @@ With some of the basics out of the way, let's begin discovering the necessary in
 ```shell
 sudo airodump-ng -w outFile --output-format pcap wlan0
 ```
-![image](/assets/img/wifi/rogue/airodump.png)
+![](/assets/img/wifi/rogue/airodump.png)
 - The AP with the SSID "Mostar". The airodump-ng output shows us Mostar is a WPA2-PSK network with CCMP. The output also tells us that Mostar is running at 130 Mbit. Finally, we notice that Mostar is running on channel 1.
 - Based on this information, we can deduce that the Mostar network is most likely 802.11n. When we create our rogue AP, we should match these settings as closely as possible to ensure that clients automatically connect to our rogue AP based on their Preferred Network List.
 - Note that we are using a 2.4 GHz card to discover this information.
@@ -39,7 +39,7 @@ We shouldn't solely trust the output of airodump-ng since it only shows the high
 To get more information, let's open the output Pcap in Wireshark by running wireshark discovery-01.cap.
 
 To find the beacon for the target AP, we can use a filter to limit the types of packets displayed. First, we can display only beacon packets by using the filter _wlan.fc.type_subtype == 0x08_. Management frames use "0" as the type and beacon frames are set to "8" as the subtype. We can also only target the Mostar SSID by adding _&&_ and using the filter _wlan.ssid == "Mostar"_.
-![image](/assets/img/wifi/rogue/packet.png)
+![](/assets/img/wifi/rogue/packet.png)
 When we select the frame, we notice the detailed information about the beacon in the section below the list of frames.
 
 By expanding the _Tagged Parameters_ tree under the _IEEEE 802.11 Wireless Management_ tree, we can review the _RSN Information_ and the _Vendor Specific: Microsoft Corp.: WPA Information Element_ trees. The latter section tells us that this AP supports WPA1, and the existence of _RSN Information_ tells us that it also supports WPA2.

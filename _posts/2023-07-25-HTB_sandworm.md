@@ -9,14 +9,14 @@ image:
 
 
 ## Work Flow
-![image]( /assets/img/htb/sandworm/workflow.png)
+![]( /assets/img/htb/sandworm/workflow.png)
 
 ## Enumeration
  Use nmap to scan this machine
-![image]( /assets/img/htb/sandworm/nmap.png)
+![]( /assets/img/htb/sandworm/nmap.png)
 
 Go to the website. I know it is the Flask framework. Click the guide to see more.
-![image]( /assets/img/htb/sandworm/web2.png)
+![]( /assets/img/htb/sandworm/web2.png)
 
 ## Exploit
 Exploit at contact -> search exploit pgp flask and follow the guide to verify signature
@@ -27,7 +27,7 @@ Try the payload  {% raw %}{{7*7}}{% endraw %} at name, after verify the signatur
 </p>
  
 
-![image]( /assets/img/htb/sandworm/payload.png)
+![]( /assets/img/htb/sandworm/payload.png)
 
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection#jinja2 
  
@@ -38,34 +38,34 @@ Use payload call OS and exploit
 ```
 
  PGP signature link: http://www.2pih.com/pgp.html
-![image]( /assets/img/htb/sandworm/key.png) 
+![]( /assets/img/htb/sandworm/key.png) 
 
 Copy the public key and the signed certificate to verify the signature -> rce 
-![image]( /assets/img/htb/sandworm/sig.png) 
-![image]( /assets/img/htb/sandworm/nc.png) 
+![]( /assets/img/htb/sandworm/sig.png) 
+![]( /assets/img/htb/sandworm/nc.png) 
  Recon all file in atlas to find the password
-![image]( /assets/img/htb/sandworm/getaccount.png)
+![]( /assets/img/htb/sandworm/getaccount.png)
 okay let's login to the machine 
-![image]( /assets/img/htb/sandworm/login.png)
+![]( /assets/img/htb/sandworm/login.png)
 
 ## Escalation
 
-![image]( /assets/img/htb/sandworm/root1.png)
+![]( /assets/img/htb/sandworm/root1.png)
  
 To get user root access from user silentobserver I must exploit to login with user atlas. The user atlas earlier was docker, unable to execute all commands.
  Check the cron job. I will use the cron job to get user atlas
-![image]( /assets/img/htb/sandworm/root_recon1.png)
-![image]( /assets/img/htb/sandworm/root_recon2.png)
-![image]( /assets/img/htb/sandworm/root_recon3.png)
+![]( /assets/img/htb/sandworm/root_recon1.png)
+![]( /assets/img/htb/sandworm/root_recon2.png)
+![]( /assets/img/htb/sandworm/root_recon3.png)
  Search for a reverse shell program in the Rust language (https://github.com/LukeDSchenk/rust-backdoors/blob/master/reverse-shell/src/main.rs )and edit file lib.rs
 
 Create a file lib.rs at attacker machine after that user silentobserver performs the download (Note: edit file lib.rs takes a long time and file is deleted every 2mins -2minutes file executes 1 time)
 
-![image]( /assets/img/htb/sandworm/edit_payload.png)
-![image]( /assets/img/htb/sandworm/get_payload.png)
-![image]( /assets/img/htb/sandworm/connect.png)
+![]( /assets/img/htb/sandworm/edit_payload.png)
+![]( /assets/img/htb/sandworm/get_payload.png)
+![]( /assets/img/htb/sandworm/connect.png)
  From user atlas, escalate to root by firejail (atlas và root both belong to the group jailer)
-![image]( /assets/img/htb/sandworm/root_recon4.png)
+![]( /assets/img/htb/sandworm/root_recon4.png)
  Exploit firejail to get root ( https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/ )
 
-![image]( /assets/img/htb/sandworm/exploit.png)
+![]( /assets/img/htb/sandworm/exploit.png)

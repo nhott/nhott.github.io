@@ -65,11 +65,11 @@ Configure the IP address and port on both Wi-Fi and Burp Suite to be the same:
 - Look for the Proxy settings option.
 - Enter the proxy server address and port number provided by your network administrator or proxy service.
 
-![image](/assets/img/android/proxy_burp.png)
+![](/assets/img/android/proxy_burp.png)
 
 Check the Burp Suite is capturing requests from the browser on your Android device
 
-![image](/assets/img/android/access_browser.png)
+![](/assets/img/android/access_browser.png)
 
 ### Configuration through an App:
 - Install a proxy app from the Google Play Store, such as ProxyDroid or Orbot.

@@ -9,14 +9,14 @@ image:
 
 
 ## Work Flow
-![image]( /assets/img/htb/keeper/workflow.png)
+![]( /assets/img/htb/keeper/workflow.png)
 
 ## Enumeration
  Use nmap to scan this machine. I detect that the machine has two ports 80 and 22 open.
-![image]( /assets/img/htb/keeper/nmap.png)
+![]( /assets/img/htb/keeper/nmap.png)
 
  I add the domain to the config file /etc/hosts and go to the browser to connect to the website
-![image]( /assets/img/htb/keeper/website.png)
+![]( /assets/img/htb/keeper/website.png)
 
 ## Exploit
 
@@ -26,36 +26,36 @@ I get the defautlt information account for RT 4.4.4 with User: root and Password
 
 Use this information, I successfully logged into the website.
 
-![image]( /assets/img/htb/keeper/user.png)
+![]( /assets/img/htb/keeper/user.png)
 
 I Continued reviewing the website and I saw some users and some information about it. I tried to login to the machine using the information I saw and I successfully SSH to the machine.
 
-![image]( /assets/img/htb/keeper/user_info.png)
+![]( /assets/img/htb/keeper/user_info.png)
 
-![image]( /assets/img/htb/keeper/login.png)
+![]( /assets/img/htb/keeper/login.png)
 
 ## Escalation
 
 After login success, I saw a zip file so I downloaded it and extract it.
 
-![image]( /assets/img/htb/keeper/download.png)
+![]( /assets/img/htb/keeper/download.png)
 
-![image]( /assets/img/htb/keeper/extract.png)
+![]( /assets/img/htb/keeper/extract.png)
 
 Use KeePassXC tool to open passcodes.kdbx. But I don't have password to unclock it, I must crack password. I used keepass2john tool to crack so it need many time so I search vulnerability of keepass and I see a vulnerability with CVE-2023-32784. I git clone code and dump passsword.
-![image]( /assets/img/htb/keeper/keepassxc.png)
+![]( /assets/img/htb/keeper/keepassxc.png)
 
-![image]( /assets/img/htb/keeper/dumpPasswd.png)
+![]( /assets/img/htb/keeper/dumpPasswd.png)
 
  Some character cannot be found in the dump, so I search google to find the word have mean. I see the word Rødgrød Med Fløde but I can't unclock, with the word at dump I try lowcase charecter rødgrød med fløde and I successfully open passcodes.kdbx file
-![image]( /assets/img/htb/keeper/search.png)
+![]( /assets/img/htb/keeper/search.png)
 
-![image]( /assets/img/htb/keeper/readPasscode.png)
+![]( /assets/img/htb/keeper/readPasscode.png)
 
 I get some information of user root. I try this password to login root but error notification "Configured password was not accepted"
-![image]( /assets/img/htb/keeper/putty_passwd.png)
+![]( /assets/img/htb/keeper/putty_passwd.png)
 
 I created a key.ppk file to authentication root user. I use this file to config auth credentical when ssh root and I successed login with root user.
-![image]( /assets/img/htb/keeper/key_auth.png)
+![]( /assets/img/htb/keeper/key_auth.png)
 
-![image]( /assets/img/htb/keeper/putty_key.png)
+![]( /assets/img/htb/keeper/putty_key.png)
