@@ -4,7 +4,7 @@ date: 2023-10-11 22:50:30 +/-TTTT
 categories: [Hack The Box, Analytics]
 tags: [Analytics HTB] 
 image:
-  path: /assets/img/htb/analytics/logo1.png
+  path: /assets/img/htb/analytics/logo551.png
 ---
 
 
