@@ -21,19 +21,19 @@ image:
 ```shell
 node node-server.js
 ```
-![](/assets/img/android/image/run_server.png)
+![image](/assets/img/android/image/run_server.png)
 
 ## Capturing the Application Traffic
 Install the application using ADB or by drag and drop. Once installed, launch the application and you’ll see the following screen.
 
-![](/assets/img/android/image/app.png)
+![image](/assets/img/android/image/app.png)
 
 This application is compiled with URL http://192.168.18.134 so we need to make a little change in our burp proxy to redirect all requests to our 127.0.0.1:1337.
-![](/assets/img/android/image/proxy_config.png)
+![image](/assets/img/android/image/proxy_config.png)
 
 Now type any username and press the **Button** to send a request. The application will send an encrypted request to our local server as shown below. Also, in response getting an encrypted string.
-![](/assets/img/android/image/request_encypt.png)
-![](/assets/img/android/image/getRequest.png)
+![image](/assets/img/android/image/request_encypt.png)
+![image](/assets/img/android/image/getRequest.png)
 
 Now let’s move on to getting the encryption keys and understanding the encryption & decryption mechanism.
 
@@ -49,9 +49,9 @@ Now run the python script to launch the application and execute our JS code.
 ```shell
 	python frida-hook.py
 ```
-![](/assets/img/android/image/run_frida.png)
+![image](/assets/img/android/image/run_frida.png)
 Our JS Code is successfully loaded now, lets send a request by pressing the **Button**.
-![](/assets/img/android/image/getInfor.png)
+![image](/assets/img/android/image/getInfor.png)
 
 ## Configuring AES Killer
 Now that we have our Secret Key, IV Parameter and Encryption method from Frida hooking too
@@ -69,8 +69,8 @@ Now that we have our Secret Key, IV Parameter and Encryption method from Frida h
 - Host - http://127.0.0.1:1337
     
 - Now Press `Start AES Killer`
-![](/assets/img/android/image/AESKiler_config.png)
+![image](/assets/img/android/image/AESKiler_config.png)
 
 ## Decrypting the Application Traffic using AES Killer
 Upon starting AES Killer, we can observe that the Burp has started to show us decrypted traffic while Burp sending encrypted traffic to the application and server.
-![](/assets/img/android/image/request_decrypt.png)
+![image](/assets/img/android/image/request_decrypt.png)

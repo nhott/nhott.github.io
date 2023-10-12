@@ -24,21 +24,21 @@ image:
     ```
    
 	
-	![](/assets/img/android/refluterRun.png)
+	![image](/assets/img/android/refluterRun.png)
 	
 	- After using reflutter to bypass the reflutter framework, the APK file still cannot be installed due to the lack of a signature. Therefore, we need to generate a signature for the APK file using uber-apk-signer-1.2.1.jar (details at *Create apk signer*).
 	- Configure the port in Burp Suite and the Android device to use port 8083.
 	
-	![](/assets/img/android/Pasted%20image%2020221121092422.png)
-	![](/assets/img/android/Pasted%20image%2020221121092451.png)
-	![](/assets/img/android/Pasted%20image%2020221121092506.png)
+	![image](/assets/img/android/Pasted%20image%2020221121092422.png)
+	![image](/assets/img/android/Pasted%20image%2020221121092451.png)
+	![image](/assets/img/android/Pasted%20image%2020221121092506.png)
 	
 - Create apk signer:
 
     ```shell
     java -jar uber-apk-signer-1.2.1.jar --apk release.RE.apk
     ```
-	![](/assets/img/android/Pasted%20image%2020221121092520.png)
+	![image](/assets/img/android/Pasted%20image%2020221121092520.png)
 
 - Install app: 
 
@@ -46,8 +46,8 @@ image:
     adb install release.RE-aligned-debugSigned.apk
     ```
 	
-	![](/assets/img/android/Pasted%20image%2020221121092544.png)
+	![image](/assets/img/android/Pasted%20image%2020221121092544.png)
 	
 	That's great! You have successfully captured the requests through Burp Suite. Now you can view and analyze the captured requests to continue with security testing or application analysis.
 	
-	![](/assets/img/android/Pasted%20image%2020221121092559.png)
+	![image](/assets/img/android/Pasted%20image%2020221121092559.png)
