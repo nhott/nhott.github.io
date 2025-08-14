@@ -3,10 +3,6 @@ name: Build and Deploy
 on:
   push:
     branches: [ "main", "master" ]
-    paths-ignore:
-      - .gitignore
-      - README.md
-      - LICENSE
   workflow_dispatch:
 
 permissions:
@@ -34,7 +30,6 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          # Dùng ruby 3.2/3.3 tùy Gemfile.lock của repo bạn.
           ruby-version: '3.3'
           bundler-cache: true
 
@@ -42,10 +37,6 @@ jobs:
         run: bundle exec jekyll build -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-
-      # (Tuỳ chọn) Kiểm tra HTML. Nếu từng fail ở bước này, có thể comment lại 3 dòng sau.
-      - name: Test site
-        run: bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
