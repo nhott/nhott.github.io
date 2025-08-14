@@ -15,11 +15,11 @@ image:
 
 Port forwarding is the simplest traffic manipulation technique we will examine in which we redirect traffic destined for one IP address and port to another IP address and port.
 
-|Machine | Account|
-|---|---|
-|attacker | kali@ttnho|
-|client1  | ntt@debian|
-|client2  | winserver 2016|
+| Machine  | Account        |
+| -------- | -------------- |
+| attacker | kali@ttnho     |
+| client1  | ntt@debian     |
+| client2  | winserver 2016 |
 
 *Note: kali and debian open port ssh*
 
